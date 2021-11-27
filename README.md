@@ -3,7 +3,7 @@ Example interactive with NFT Collection with Web3js
 
 # postman interact
   - Mint NFT
-    - Host: localhost:5000/sc-deploy/mint
+    - Host: `localhost:5000/sc-deploy/mint`
     - Method: POST
     - body:
     ```json
