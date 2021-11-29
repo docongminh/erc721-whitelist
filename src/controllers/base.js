@@ -1,9 +1,11 @@
 const Web3 = require('web3');
-
-
 const nft = require("../contracts/NFT.json");
+
+
 const abi = nft.abi;
-const sc_addr = '0x5A711DEf3284E98776F0755eD339C20FC203f036';
+const networkId = 5777;
+// const sc_addr = '0x5A711DEf3284E98776F0755eD339C20FC203f036';
+const sc_addr = nft.networks[networkId].address
 
 
 class BaseInteractive{
