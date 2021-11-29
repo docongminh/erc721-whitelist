@@ -39,6 +39,7 @@ contract NFT is ERC721, Ownable {
     // add white list address
     function setWhiteList (address user) public onlyOwner {
         require(user != address(0), "Zero address");
+        require(whiteLists[user] != true, "Address already whitelist member");
         whiteLists[user] = true;
         whitelistCounter += 1;
         
