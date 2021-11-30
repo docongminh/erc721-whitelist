@@ -5,6 +5,10 @@ Example interactive with NFT Collection with Web3js
   - Mint NFT
     - Host: `localhost:5000/sc-deploy/mint`
     - Method: POST
+    - How to Start: 
+      - Setup Truffle + Ganache & Deploy Smart Contract refer [tutorial](https://www.trufflesuite.com/docs/truffle/quickstart)
+      - Add more subcribe events wanna listen as [here](https://github.com/docongminh/nft-web3js/blob/master/src/index.js#L15)
+      - `npm start`
     - body:
     ```json
         {
@@ -68,9 +72,26 @@ Example interactive with NFT Collection with Web3js
         }
     }
     ```
+    - Event Subcribe Event response 
+    ```
+    {
+        logIndex: 0,
+        transactionIndex: 0,
+        transactionHash: '0xb8ca3c36e5c25d3dc8bc1257779cbc4503d19ee7243ce3e77dc2d42d911fdd7d',
+        blockHash: '0x6e9d176541ba6e766582f6ad6d7990b43405ccf32c8d75266bc861005808ed00',
+        blockNumber: 179,
+        address: '0x368D1bFce6B72B7EC8b0710f5c838d284E9d57e3',
+        data: '0x000000000000000000000000ae28a59505c6c03f29a9399801773787f6b4ff83',
+        topics: [
+          '0x1e7df6907392ac808f34af305a213fb6cbade2a226c37680af3d2f7b1452fcd2'
+        ],
+        type: 'mined',
+        id: 'log_8dd444b3'
+    }
+    ```
 - Related features: Set whitelist, remove whitelist, set ban list, remove ban list,...
 # TODO
-- [ ] Add event interactive
+- [x] Add event interactive
 - [ ] Some features about analyze SC with event
 - [ ] Another version with Ether.js
 - [ ] Some NFT image save on IPFS
