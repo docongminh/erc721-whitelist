@@ -26,8 +26,6 @@ contract NFT is ERC721, Ownable {
     event setBanListStatus(address user);
     // event remove user from ban list
     event removeBanListStatus(address user);
-    //
-    event reset(string message);
 
 
     // defined NFT

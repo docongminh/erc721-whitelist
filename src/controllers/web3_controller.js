@@ -188,13 +188,37 @@ class SCInteractive extends BaseInteractive{
             return res.send(message);
         }
     }
+    //
+    async approve(req, res){
+        try{
+            const token_owner = req.body.token_owner;
+            const to = req.body.to;
+            const tokenId = req.body.tokenId;
+
+            let result = await this.contract.methods.approve(to, tokenId).send({from: token_owner});
+            let message = {
+                "message": "success approve",
+                "body": result
+            }
+            return res.send(message);
+        }catch(error){
+            console.log(error)
+            let message = {
+                "message": "error approve",
+                "body": error
+            }
+            return res.send(message);
+        }
+    }
     // transfer
     async transfer(req, res){
         try{
             const from = req.body.from;
+            const from_owner = req.body.from_owner;
             const to = req.body.to;
             const tokenId = req.body.tokenId;
-            let result = await this.contract.methods.transferFrom(from, to, tokenId).send({from: from});
+
+            let result = await this.contract.methods.transferFrom(from_owner, to, tokenId).send({from: from});
             let message = {
                 "message": "success transfer",
                 "body": result
