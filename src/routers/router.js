@@ -11,6 +11,8 @@ router.post('/mint', (req, res) => {return SC.safeMint(req, res)});
 router.post('/mint-update', (req, res) => {return SC.updateNFT(req, res)});
 router.post('/banlist-set', (req, res) => {return SC.setBanList(req, res)});
 router.post('/banlist-unban', (req, res) => {return SC.unBan(req, res)});
+router.post('/approve', (req, res) => {return SC.approve(req, res)});
+router.get('/check-approve', (req, res) => {return SC.check_approve(req, res)});
 router.post('/transfer', (req, res) => {return SC.transfer(req, res)});
 
 

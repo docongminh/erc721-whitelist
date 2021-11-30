@@ -9,7 +9,7 @@ class SCEvent extends BaseInteractive{
     getSignature(event_name){
         const events = this.getEvents();
         for(var event in events){
-            if(events[event].name == event_name){
+            if(events[event].name === event_name){
                 return event;
             }
         }
@@ -30,6 +30,7 @@ class SCEvent extends BaseInteractive{
                 else{
                     console.log(`Error '${event_name}' event: `, result)
                 }
+                
             })
             this.subscribedEvents[event_name] = subscription;
         }
