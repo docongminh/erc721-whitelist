@@ -90,8 +90,3 @@ Example interactive with NFT Collection with Web3js
     }
     ```
 - Related features: Set whitelist, remove whitelist, set ban list, remove ban list,...
-# TODO
-- [x] Add event interactive
-- [ ] Some features about analyze SC with event
-- [ ] Another version with Ether.js
-- [ ] Some NFT image save on IPFS
